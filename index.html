@@ -20,7 +20,7 @@
 	<script src="js/xml2json.js"></script>
 
 </head>
-<body>
+<body ng-controller="MenuDataCtrl">
 
 	<div class="row">
 		<div class="large-12 columns">
@@ -29,133 +29,140 @@
 	</div>
 
 	<div class="row">
-
-		<div class="section-container auto" data-section>
-			<section>
-				<p class="title"><a href="#section1">Breakfast</a></p>
-				<div class="content" data-slug="section1">
-					<!-- Breakfast -->
-					<div class="row" ng-controller="MenuDataCtrl">
-						<div class="large-12 columns">
-							<h3 style="text-align: center;">Breakfast</h3>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Ross</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.0.Breakfast.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.0.Breakfast.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Proctor</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.1.Breakfast.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.1.Breakfast.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Atwater</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.1.Breakfast.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.2.Breakfast.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<p class="title"><a href="#section2">Lunch</a></p>
-				<div class="content" data-slug="section2">
-					<!-- Lunch -->
-					<div class="row" ng-controller="MenuDataCtrl">
-						<div class="large-12 columns">
-							<h3 style="text-align: center;">Lunch</h3>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Ross</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.0.Lunch.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.0.Lunch.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Proctor</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.1.Lunch.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.1.Lunch.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Atwater</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.2.Lunch.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.2.Lunch.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section>
-				<p class="title"><a href="#section2">Dinner</a></p>
-				<div class="content" data-slug="section2">
-					<!-- Dinner -->
-					<div class="row" ng-controller="MenuDataCtrl">
-						<div class="large-12 columns">
-							<h3 style="text-align: center;">Dinner</h3>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Ross</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.0.Dinner.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.0.Dinner.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Proctor</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.1.Dinner.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.1.Dinner.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-						<div class="large-4 columns">
-							<h4 class="subheader">Atwater</h4>
-							<hr>
-							<p ng-hide="menuData.root.menu.2.Dinner.item_asArray.length > 0">No Data</p>
-							<ul class="no-bullet">
-								<li ng-repeat="item in menuData.root.menu.2.Dinner.item_asArray">
-									{{item}}
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+		<div class="row">
+			<div class="large-12 columns">
+				<dl class="sub-nav">
+					<dd><a href="#breakfast">breakfast</a></dd>
+					<dd><a href="#lunch">lunch</a></dd>
+					<dd><a href="#dinner">dinner</a></dd>
+				</dl>
+			</div>
 		</div>
 
+		<div class="row">
+			<div class="section-container" data-section data-options="deep_linking: true">
+				<section class="section">
+					<div class="content" data-slug="breakfast">
+						<!-- Breakfast -->
+						<div class="row">
+							<div class="large-12 columns">
+								<h3 style="text-align: center;">Breakfast</h3>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Ross</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.0.Breakfast.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.0.Breakfast.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Proctor</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.1.Breakfast.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.1.Breakfast.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Atwater</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.1.Breakfast.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.2.Breakfast.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="content" data-slug="lunch">
+						<!-- Lunch -->
+						<div class="row">
+							<div class="large-12 columns">
+								<h3 style="text-align: center;">Lunch</h3>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Ross</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.0.Lunch.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.0.Lunch.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Proctor</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.1.Lunch.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.1.Lunch.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Atwater</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.2.Lunch.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.2.Lunch.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section">
+					<div class="content" data-slug="dinner">
+						<!-- Dinner -->
+						<div class="row">
+							<div class="large-12 columns">
+								<h3 style="text-align: center;">Dinner</h3>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Ross</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.0.Dinner.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.0.Dinner.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Proctor</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.1.Dinner.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.1.Dinner.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+							<div class="large-4 columns">
+								<h4 class="subheader">Atwater</h4>
+								<hr>
+								<p ng-hide="menuData.root.menu.2.Dinner.item_asArray.length > 0">No Data</p>
+								<ul class="no-bullet">
+									<li ng-repeat="item in menuData.root.menu.2.Dinner.item_asArray">
+										{{item}}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
 	</div>
 
 	<!-- Load Foundation JS | Before body close for efficiency -->
