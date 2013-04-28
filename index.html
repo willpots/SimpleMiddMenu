@@ -4,7 +4,22 @@
 
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<!-- Apple Mobile Support -->
+	<meta name="apple-mobile-web-app-title" content="AddToHome">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 
+	<link rel="apple-touch-icon" href="../images/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../images/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../images/touch-icon-iphone4.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../images/touch-icon-ipad2.png"> -->
+	
+
+	<link rel="stylesheet" href="css/add2home.css">
+	<script type="text/javascript" src="js/add2home.js" charset="utf-8"></script>
+
 	<title>SimpleMenu by Nate</title>
 
 	<link rel="stylesheet" href="css/app.css" />
@@ -22,12 +37,14 @@
 </head>
 <body ng-controller="MenuDataCtrl">
 
+	<!-- Title -->
 	<div class="row">
 		<div class="large-12 columns">
-			<h2 style="text-align: center;"><a href="">Middlebury College Dining</a></h2>
+			<h2 style="text-align: center;"><a href="">Midd Dining Menu</a></h2>
 		</div>
 	</div>
-	<!-- Breakfast -->
+
+	<!-- Display Menu -->
 	<div class="row">
 		<div class="large-12 columns">
 			<h3 style="text-align: center;" class="subheader">now serving: {{ meal }}</h3>
@@ -61,6 +78,13 @@
 					{{item}}
 				</li>
 			</ul>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="row">
+		<div class="large-12 columns" id="footer">
+			<p>Coded by <a href="http://natebeatty.com">Nate Beatty</a> in 2013 | Not affiliated with Middlebury College</p>
 		</div>
 	</div>
 

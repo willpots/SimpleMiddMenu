@@ -5,3 +5,19 @@
 .dininghall {
 	text-align: center;
 }
+
+#footer {
+	text-align: center;
+	color: #6f6f6f;
+	font-size: small;
+}
+
+#footer a {
+	border-bottom: dashed 1px;
+	color: #6f6f6f;
+	font-size: small;
+}
+
+#footer a:hover{
+	color: #222;
+}
