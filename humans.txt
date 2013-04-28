@@ -1,0 +1,6 @@
+/* Made by Nate Beatty in 2013 */
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: jQuery, AngularJS, Zurb Foundation
+  Software: Git, SublimeText 2, Safari
