@@ -7,20 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
 	<!-- Apple Mobile Support -->
-	<meta name="apple-mobile-web-app-title" content="AddToHome">
+	<meta name="apple-mobile-web-app-title" content="Midd Menu">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!-- 
-	<link rel="apple-touch-icon" href="../images/touch-icon-iphone.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="../images/touch-icon-ipad.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="../images/touch-icon-iphone4.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="../images/touch-icon-ipad2.png"> -->
 	
+	<link rel="apple-touch-icon" href="img/icons/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/icons/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/icons/touch-icon-iphone4.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/icons/touch-icon-ipad2.png">
+
 
 	<link rel="stylesheet" href="css/add2home.css">
 	<script type="text/javascript" src="js/add2home.js" charset="utf-8"></script>
 
-	<title>SimpleMenu by Nate</title>
+	<title>Middlebury Dining | Simplified</title>
 
 	<link rel="stylesheet" href="css/app.css" />
 
@@ -52,7 +52,7 @@
 		<div class="large-4 columns">
 			<h4>Ross</h4>
 			<hr>
-			<p ng-hide="menuData.ross[meal].length > 0">No Data</p>
+			<p ng-hide="menuData.ross[meal].length > 0">No Data Available</p>
 			<ul class="no-bullet">
 				<li ng-repeat="item in menuData.ross[meal]">
 					{{item}}
@@ -62,7 +62,7 @@
 		<div class="large-4 columns">
 			<h4>Proctor</h4>
 			<hr>
-			<p ng-hide="menuData.proctor[meal].length > 0">No Data</p>
+			<p ng-hide="menuData.proctor[meal].length > 0">No Data Available</p>
 			<ul class="no-bullet">
 				<li ng-repeat="item in menuData.proctor[meal]">
 					{{item}}
@@ -72,7 +72,7 @@
 		<div class="large-4 columns">
 			<h4>Atwater</h4>
 			<hr>
-			<p ng-hide="menuData.atwater[meal].length > 0">No Data</p>
+			<p ng-hide="menuData.atwater[meal].length > 0">No Data Available</p>
 			<ul class="no-bullet">
 				<li ng-repeat="item in menuData.atwater[meal]">
 					{{item}}

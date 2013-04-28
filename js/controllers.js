@@ -39,7 +39,7 @@ function currentMeal() {
 
   if (hour <= 10) {
     meal = 'breakfast';
-  } else if (hour <= 1) {
+  } else if (hour <= 13) {
     meal = 'lunch';
   } else {
     meal = 'dinner';
