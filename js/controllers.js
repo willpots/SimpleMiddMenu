@@ -29,6 +29,23 @@ function MenuDataCtrl($scope, $http) {
     $scope.menuData = data || "Request failed";
   });
 
+  $scope.meal = currentMeal();
+
+}
+
+function currentMeal() {
+  var hour = d.getHours();
+  var meal;
+
+  if (hour <= 10) {
+    meal = 'breakfast';
+  } else if (hour <= 1) {
+    meal = 'lunch';
+  } else {
+    meal = 'dinner';
+  }
+
+  return meal;
 }
 
 function parseResponse(data) {
@@ -51,7 +68,7 @@ function parseResponse(data) {
     }
   };
 
-  console.log("Some Items: " + jsonClean.ross.breakfast);
+//  console.log("Some Items: " + jsonClean.ross.breakfast);
 
-  return jsonRaw;
+  return jsonClean;
 }
