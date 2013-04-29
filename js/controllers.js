@@ -30,7 +30,15 @@ function MenuDataCtrl($scope, $http) {
   });
 
   $scope.meal = currentMeal();
-
+  $scope.nextMeal = function() {
+    if($scope.meal == 'breakfast') {
+      $scope.meal = 'lunch';
+    } else if($scope.meal == 'lunch') {
+      $scope.meal = 'dinner';
+    } else if($scope.meal == 'dinner') {
+      $scope.meal = 'breakfast';
+    }
+  };
   $scope.isMobile = (detectMobile()) ? true : false;
 
 }
